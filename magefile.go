@@ -65,6 +65,7 @@ var protoModules = []string{
 	"third",
 	"user",
 	"wrapperspb",
+	"studentgroup",
 }
 
 // install proto plugin
@@ -450,7 +451,8 @@ func GenHarmonyTS() error {
 	args := []string{
 		"-t", "static-module",
 		"-w", "es6",
-		"-o", outJSFile}
+		"-o", outJSFile,
+	}
 
 	for _, module := range protoModules {
 		protoFile := filepath.Join(module, module) + ".proto"
